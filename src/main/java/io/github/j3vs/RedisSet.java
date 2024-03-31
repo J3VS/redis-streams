@@ -32,7 +32,7 @@ public class RedisSet extends RedisCollection implements Set<String> {
 
     @Override
     public Iterator<String> iterator() {
-        final RedisCollection.Cursor cursor = new Cursor();
+        final RedisCursor cursor = new RedisCursor();
         ScanParams scanParams = new ScanParams().count(1000);
         LinkedList<String> results = new LinkedList<>();
         return new Iterator<>() {
